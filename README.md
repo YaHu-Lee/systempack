@@ -1,0 +1,2 @@
+# systempack
+本项目构建于webpack loader生态与system.js之上，尝试利用这两者来提供快速的开发环境与稳定的生产环境的结合

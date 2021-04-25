@@ -1,0 +1,19 @@
+{
+  "name": "systempack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:YaHu-Lee/systempack.git",
+  "author": "YaHu-Lee <lyh990719@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/generator": "^7.13.16",
+    "@babel/parser": "^7.13.16",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/traverse": "^7.13.17",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.2.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
