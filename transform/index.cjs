@@ -29,12 +29,16 @@ function read(path) {
       })
     } else if(stat.isFile()) {
       fs.readFile(path, {}, (err, data) => {
-        loader.call({
-          async: () => (err, code, map) => {
-            console.log(code)
-            fs.writeFile(path.replace(dir, pt.join(__dirname, "dist")), code || " ", () => {})
-          }
-        }, data, null)
+        if(/\.js$/.test(path)) {
+          loader.call({
+            async: () => (err, code, map) => {
+              console.log(code)
+              fs.writeFile(path.replace(dir, pt.join(__dirname, "dist")), code || " ", () => {})
+            }
+          }, data, null)
+        } else {
+          fs.writeFile(path.replace(dir, pt.join(__dirname, "dist")), data, () => {})
+        }
       })
     }
   })
